@@ -13,7 +13,7 @@ public class _01Tipos
     }
 
     //  Función con retorno y parámetros
-    
+
     private static int sumar(int num, int num2)
     {
         return num + num2;
