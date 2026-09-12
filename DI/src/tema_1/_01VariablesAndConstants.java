@@ -1,6 +1,6 @@
 package tema_1;
 
-public class VariablesAndConstants01
+public class _01VariablesAndConstants
 {
     public static void main(String[] args)
     {
