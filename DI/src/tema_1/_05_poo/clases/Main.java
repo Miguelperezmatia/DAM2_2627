@@ -6,5 +6,12 @@ public class Main
     {
         Persona p = new Persona("Miguel", 24);
         p.greet();
+
+        Animal a = new Animal("Mike");
+        a.eat();
+
+        Perro perro = new Perro("Chufly");
+        perro.eat();
+        perro.ladrar();
     }
 }
