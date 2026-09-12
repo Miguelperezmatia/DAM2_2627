@@ -1,4 +1,4 @@
-package tema_1._02Loops;
+package tema_1._02_loops;
 
 public class _01for
 {
