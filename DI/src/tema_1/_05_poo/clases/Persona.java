@@ -30,20 +30,22 @@ public class Persona
 
     public void setName(String name)
     {
-        this.name = name;
         if(name.isEmpty())
             throw new IllegalArgumentException("El nombre no puede ser vacío");
+
+        this.name = name;
     }
 
     public void setAge(int age)
     {
-        this.age = age;
         if (age < 0)
             throw new IllegalArgumentException("La edad no puede ser negativa");
+
+        this.age = age;
     }
 
     public void greet()
     {
-        System.out.println("Hola, soy " + this.name + " y tengo " + this.age + " años");
+        System.out.println("Hola, soy " + name + " y tengo " + age + " años");
     }
 }
