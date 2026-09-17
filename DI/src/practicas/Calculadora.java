@@ -6,9 +6,14 @@ public class Calculadora
 {
     public static void main(String[] args)
     {
-        mostrarOpciones();
-        int opcion = leerOpcion();
-        ejecutarOpcion(opcion);
+        while(true)
+        {
+            mostrarOpciones();
+            int opcion = leerOpcion();
+            ejecutarOpcion(opcion);
+            if(opcion==5)
+                break;
+        }
     }
 
     static Scanner scanner = new Scanner(System.in);
