@@ -15,8 +15,12 @@ public class Calculadora
 
     private static void ejecutarOpcion(int opcion)
     {
+        int resultado = 0;
+
         if(opcion==1)
-            sumar();
+        {
+            resultado = sumar();
+        }
         else if(opcion==2)
             restar();
         else if(opcion==3)
@@ -25,6 +29,19 @@ public class Calculadora
             dividir();
         else
             salir();
+    }
+
+    private static int sumar()
+    {
+        int num1 = leerNumero("Introduce el primer número: ");
+        int num2 = leerNumero("Introduce el segundo número: ");
+        return num1 + num2;
+    }
+
+    private static int leerNumero(String mensaje)
+    {
+        System.out.print(mensaje);
+        return scanner.nextInt();
     }
 
     private static int leerOpcion()
