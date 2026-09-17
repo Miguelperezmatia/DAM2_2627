@@ -46,7 +46,7 @@ public class Calculadora
 
         int resultado = num1 / num2;
 
-        System.out.printf("%d / %d = %d", num1, num2, resultado);
+        mostrarResultado(num1, num2, resultado, '/');
     }
 
     private static void multiplicar()
@@ -59,7 +59,7 @@ public class Calculadora
         for (int i = 0; i < num2; i++)
             resultado += num1;
 
-        System.out.printf("%d * %d = %d", num1, num2, resultado);
+        mostrarResultado(num1, num2, resultado, '*');
     }
 
     private static void restar()
@@ -68,7 +68,7 @@ public class Calculadora
         int num2 = leerNumero("NÚMERO 2: ");
         int resultado = num1 - num2;
 
-        System.out.printf("%d - %d = %d", num1, num2, resultado);
+        mostrarResultado(num1, num2, resultado, '-');
     }
 
 
@@ -78,8 +78,14 @@ public class Calculadora
         int num2 = leerNumero("NÚMERO 2: ");
         int resultado = num1 + num2;
 
-        System.out.printf("%d + %d = %d", num1, num2, resultado);
+        mostrarResultado(num1, num2, resultado, '+');
     }
+
+    private static void mostrarResultado(int num1, int num2, int resultado, char operador)
+    {
+        System.out.printf("%d %c %d = %d%n", num1, operador, num2, resultado);
+    }
+
 
     private static int leerNumero(String mensaje)
     {
@@ -89,20 +95,18 @@ public class Calculadora
 
     private static int leerOpcion()
     {
-        System.out.print("Elige una opción: ");
+        System.out.print("OPCIÓN: ");
         return scanner.nextInt();
     }
 
     private static void mostrarOpciones()
     {
-        System.out.println("""
-                OPCIÓN  ACCIÓN
-                
-                1       SUMAR
-                2       RESTAR
-                3       MULTIPLICAR
-                4       DIVIDIR
-                otra    SALIR
+        System.out.print("""
+                1. Sumar
+                2. Restar
+                3. Multiplicar
+                4. Dividir
+                5. Salir
                 """);
     }
 }
