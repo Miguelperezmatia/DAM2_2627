@@ -29,11 +29,20 @@ public class Calculadora
             salir();
     }
 
+    private static void restar()
+    {
+        int num1 = leerNumero("NÚMERO 1: ");
+        int num2 = leerNumero("NÚMERO 2: ");
+        int resultado = num1 - num2;
+
+        System.out.printf("%d - %d = %d", num1, num2, resultado);
+    }
+
 
     private static void sumar()
     {
-        int num1 = leerNumero("Introduce el primer número: ");
-        int num2 = leerNumero("Introduce el segundo número: ");
+        int num1 = leerNumero("NÚMERO 1: ");
+        int num2 = leerNumero("NÚMERO 2: ");
         int resultado = num1 + num2;
 
         System.out.printf("%d + %d = %d", num1, num2, resultado);
