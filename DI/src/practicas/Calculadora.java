@@ -4,6 +4,9 @@ import java.util.Scanner;
 
 public class Calculadora
 {
+    /*
+        Subí dos veces el mismo commit, quería decir "redefinir función sumar"
+    */
     public static void main(String[] args)
     {
         mostrarOpciones();
@@ -11,9 +14,11 @@ public class Calculadora
         while(true)
         {
             int opcion = leerOpcion();
-            ejecutarOpcion(opcion);
+
             if(opcion==5)
                 break;
+
+            ejecutarOpcion(opcion);
         }
     }
 
@@ -21,7 +26,7 @@ public class Calculadora
 
     private static void ejecutarOpcion(int opcion)
     {
-        int resultado = 0;
+        System.out.println();
 
         if(opcion==1)
            sumar();
@@ -31,13 +36,6 @@ public class Calculadora
             multiplicar();
         else if(opcion==4)
             dividir();
-        else if(opcion == 5)
-            salir();
-    }
-
-    private static void salir()
-    {
-        System.out.print("FÍN DEL PROGRAMA");
     }
 
     private static void dividir()
@@ -71,7 +69,7 @@ public class Calculadora
 
         mostrarResultado(num1, num2, resultado, '-');
     }
-    
+
     private static void sumar()
     {
         int num1 = leerNumero("NÚMERO 1: ");
@@ -86,7 +84,6 @@ public class Calculadora
         System.out.printf("%d %c %d = %d%n%n", num1, operador, num2, resultado);
     }
 
-
     private static int leerNumero(String mensaje)
     {
         System.out.print(mensaje);
@@ -96,9 +93,7 @@ public class Calculadora
     private static int leerOpcion()
     {
         System.out.print("OPCIÓN: ");
-        int opcion = scanner.nextInt();
-        System.out.println();
-        return opcion;
+        return scanner.nextInt();
     }
 
     private static void mostrarOpciones()
