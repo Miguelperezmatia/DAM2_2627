@@ -29,6 +29,11 @@ public class Calculadora
             salir();
     }
 
+    private static void salir()
+    {
+        System.out.println("FÍN DEL PROGRAMA");
+    }
+
     private static void dividir()
     {
         int num1 = leerNumero("NÚMERO 1: ");
