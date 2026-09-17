@@ -18,9 +18,7 @@ public class Calculadora
         int resultado = 0;
 
         if(opcion==1)
-        {
-            resultado = sumar();
-        }
+           sumar();
         else if(opcion==2)
             restar();
         else if(opcion==3)
@@ -31,11 +29,14 @@ public class Calculadora
             salir();
     }
 
-    private static int sumar()
+
+    private static void sumar()
     {
         int num1 = leerNumero("Introduce el primer número: ");
         int num2 = leerNumero("Introduce el segundo número: ");
-        return num1 + num2;
+        int resultado = num1 + num2;
+
+        System.out.printf("%d + %d = %d", num1, num2, resultado);
     }
 
     private static int leerNumero(String mensaje)
