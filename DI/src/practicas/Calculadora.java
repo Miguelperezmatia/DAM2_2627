@@ -6,9 +6,10 @@ public class Calculadora
 {
     public static void main(String[] args)
     {
+        mostrarOpciones();
+
         while(true)
         {
-            mostrarOpciones();
             int opcion = leerOpcion();
             ejecutarOpcion(opcion);
             if(opcion==5)
@@ -30,13 +31,13 @@ public class Calculadora
             multiplicar();
         else if(opcion==4)
             dividir();
-        else
+        else if(opcion == 5)
             salir();
     }
 
     private static void salir()
     {
-        System.out.println("FÍN DEL PROGRAMA");
+        System.out.print("FÍN DEL PROGRAMA");
     }
 
     private static void dividir()
@@ -70,8 +71,7 @@ public class Calculadora
 
         mostrarResultado(num1, num2, resultado, '-');
     }
-
-
+    
     private static void sumar()
     {
         int num1 = leerNumero("NÚMERO 1: ");
@@ -83,7 +83,7 @@ public class Calculadora
 
     private static void mostrarResultado(int num1, int num2, int resultado, char operador)
     {
-        System.out.printf("%d %c %d = %d%n", num1, operador, num2, resultado);
+        System.out.printf("%d %c %d = %d%n%n", num1, operador, num2, resultado);
     }
 
 
@@ -96,7 +96,9 @@ public class Calculadora
     private static int leerOpcion()
     {
         System.out.print("OPCIÓN: ");
-        return scanner.nextInt();
+        int opcion = scanner.nextInt();
+        System.out.println();
+        return opcion;
     }
 
     private static void mostrarOpciones()
