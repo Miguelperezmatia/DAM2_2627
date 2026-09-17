@@ -8,11 +8,24 @@ public class Calculadora
     {
         mostrarOpciones();
         int opcion = leerOpcion();
+        ejecutarOpcion(opcion);
     }
 
     static Scanner scanner = new Scanner(System.in);
 
-
+    private static void ejecutarOpcion(int opcion)
+    {
+        if(opcion==1)
+            sumar();
+        else if(opcion==2)
+            restar();
+        else if(opcion==3)
+            multiplicar();
+        else if(opcion==4)
+            dividir();
+        else
+            salir();
+    }
 
     private static int leerOpcion()
     {
