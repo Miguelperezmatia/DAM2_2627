@@ -9,4 +9,5 @@ out/
 *.iml
 SGE/
 DASP/
+PMyDM/node_modules/
 
