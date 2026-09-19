@@ -43,4 +43,28 @@ console.log(-16 % 17)    //  -16
 console.log(2 ** 3);  // 8   -> potencia (2 elevado a 3)
 
 
+//  MÚLTIPLO DE UN NÚMERO
+
+let num = 6
+
+if(num % 3 === 0)
+    console.log("Es múltiplo de 3")
+else 
+    console.log("No es múltiplo de 3")
+
+
+
+let mensaje = "Es múltiplo de 3"
+
+if(num % 3 !== 0)
+    mensaje = "No es múltiplo de 3"
+
+console.log(mensaje)
+
+
+//  OPERADOR TERNARIO
+num % 3 === 0 ? console.log("Es múltiplo de 3") : console.log("No es múltiplo de 3")
+
+
+
 
