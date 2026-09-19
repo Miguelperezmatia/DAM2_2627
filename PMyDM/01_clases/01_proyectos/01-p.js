@@ -40,4 +40,7 @@ console.log(11 % 12)    //  11
 console.log(-1 % 17)    //  -1
 console.log(-16 % 17)    //  -16
 
+console.log(2 ** 3);  // 8   -> potencia (2 elevado a 3)
+
+
 
