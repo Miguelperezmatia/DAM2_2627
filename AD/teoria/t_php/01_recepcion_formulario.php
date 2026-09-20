@@ -13,6 +13,9 @@
 
         echo "Soy $nombre y tengo $edad"
     ?>
+    <br><br>
+
+    NOMBRE DE SOLO LECTURA: <input type="text" value="<?php echo $nombre ?>" readonly>
 
     <!--
 
@@ -27,6 +30,9 @@
         
         Al enviar el formulario, la informacion que el usuario escribe se guarda en el array $_POST, organizada por el atributo
         name de cada <input>
+
+        value           Establece el contenido exacto que se muestra escrito dentro de un <input>
+
     -->
 
 </body>

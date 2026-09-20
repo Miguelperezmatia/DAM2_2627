@@ -27,6 +27,9 @@
                     type            Especificamos el contenido que se puede escribir:   text(strings),  number(numeros enteros)
                     name            Es el identificador de dicha caja de texto
                     placeholder     Valor que sale por defecto en la caja de texto para ayudar al usuario
+                    value           Establece el contenido exacto que se muestra escrito dentro de un campo
+
+                    readonly        Campo de solo lectura
 
         <button>    Crea un boton para pulsar
     -->
