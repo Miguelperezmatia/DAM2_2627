@@ -1,5 +1,12 @@
+<!-- 
+    Formulario con nombre y edad
+
+    Formulario con dos campos (nombre y edad) que envía sus datos por POST a una segunda página, la cual saluda al usuario 
+    y calcula la edad que tendra el año que viene.
+-->
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
