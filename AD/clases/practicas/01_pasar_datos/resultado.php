@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>PRUBA DE FORMULARIO</h1>
+
+    <?php
+        $nombre = $_POST['nombre'];
+        $edad = $_POST['edad'];
+    ?>
+        
+    <p>Hola <?php echo $nombre;?>, el ano que viene tendras <?php echo $edad + 1;?> anos</p>
+</body>
+</html>
