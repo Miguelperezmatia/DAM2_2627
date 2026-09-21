@@ -35,17 +35,26 @@
                 }
 
             else 
-                echo "Introduce un operador válido";
+                $resultado = "Introduce un operador válido";
 
             return $resultado;
         }
 
+        function mostrarResultado($resultado)
+        {
+            if(is_string($resultado))
+                return "Error: $resultado";
+            
+            return "El resultado es $resultado";
+        }
+
         $resultado = calcularOperacion($num1, $num2, $operador);
+        $mensaje = mostrarResultado($resultado);
     ?>
 
     <h3>RESULTADO DE LA OPERACIÓN</h3>
 
-    <p>El resultado es <input value="<?php echo $resultado ?>" readonly> </p>
+    <p> <input value="<?php echo $mensaje ?>" style="width: 300px" readonly> </p>
 
 </body>
 </html>
