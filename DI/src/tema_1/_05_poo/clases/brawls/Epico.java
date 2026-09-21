@@ -14,18 +14,18 @@ public class Epico implements Brawler
     @Override
     public void atacar()
     {
-        System.out.printf("%s con %d atacando%n", nombre, vida);
+        System.out.printf("%s con %d de vida de tipo épico atacando%n", nombre, vida);
     }
 
     @Override
     public void defender()
     {
-        System.out.printf("%s con %d defendiendo%n", nombre, vida);
+        System.out.printf("%s con %d de vida de tipo épico defendiendo%n", nombre, vida);
     }
 
     @Override
     public void morir()
     {
-        System.out.printf("%s con %d muerto%n", nombre, vida);
+        System.out.printf("%s con %d de vida de tipo épico muerto%n", nombre, vida);
     }
 }
