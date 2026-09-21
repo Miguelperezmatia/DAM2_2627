@@ -33,14 +33,14 @@ public class Main
         for(Arma arma : armas)
             arma.disparar();
 
-        Brawler legendario1 = new Legendario();
-        Brawler legendario2 = new Legendario();
+        Legendario legendario1 = new Legendario(100,"spike");
+        Legendario legendario2 = new Legendario(50,"leon");
 
-        Brawler epico1 = new Epico();
-        Brawler epico2 = new Epico();
+        Epico epico1 = new Epico(130,"tara");
+        Epico epico2 = new Epico(150,"byron");
 
-        Brawler mitico1 = new Mitico();
-        Brawler mitico2 = new Mitico();
+        Mitico mitico1 = new Mitico(105,"bo");
+        Mitico mitico2 = new Mitico(300,"genio");
 
         ArrayList<Brawler> brawlers = new ArrayList<>();
         brawlers.add(legendario1);
@@ -51,9 +51,7 @@ public class Main
         brawlers.add(mitico2);
 
         for(Brawler b: brawlers)
-        {
             b.atacar();
-            b.defender();
-        }
+
     }
 }
