@@ -1,14 +1,10 @@
 package tema_1._05_poo.clases.brawls;
 
-public class Legendario implements Brawler
-{
-    private String nombre;
-    private int vida;
+public class Legendario extends Brawler{
 
-    public Legendario(int vida, String nombre)
+    public Legendario(String nombre, int vida)
     {
-        this.vida = vida;
-        this.nombre = nombre;
+        super(nombre, vida);
     }
 
     @Override
@@ -17,15 +13,5 @@ public class Legendario implements Brawler
         System.out.printf("%s con %d de vida de tipo legendario atacando%n", nombre, vida);
     }
 
-    @Override
-    public void defender()
-    {
-        System.out.printf("%s con %d de vida de tipo legendario defendiendo%n", nombre, vida);
-    }
 
-    @Override
-    public void morir()
-    {
-        System.out.printf("%s con %d de vida de tipo legendario muerto%n", nombre, vida);
-    }
 }
