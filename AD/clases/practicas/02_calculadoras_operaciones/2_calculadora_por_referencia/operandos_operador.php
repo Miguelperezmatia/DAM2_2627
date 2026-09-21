@@ -28,7 +28,7 @@
 
             else if($operador === "/")
                 {
-                    if($numeroDos === 0)
+                    if($numeroDos === 0.0)
                         $resultado = "No se puede dividir por cero";        
                     else
                         $resultado = $numeroUno / $numeroDos;
