@@ -35,31 +35,31 @@
                 }
 
             else 
-                echo "Introduce un operador válido";
+                $resultado = "Introduce un operador válido";
         }
 
         $total = 0;
         calcularOperacion(8,2,"+", $total);
-        echo $total;
+        echo $total . "<br>";
 
         $total = 0;
         calcularOperacion(8,2,"-", $total);
-        echo $total;
+        echo $total . "<br>";
 
         
         $total = 0;
         calcularOperacion(8,2,"*", $total);
-        echo $total;
+        echo $total . "<br>";
 
         
         $total = 0;
         calcularOperacion(8,2,"/", $total);
-        echo $total;
+        echo $total . "<br>";
 
         
         $total = 0;
         calcularOperacion(8,0,"/", $total);
-        echo $total;
+        echo $total . "<br>";
     ?>
 </body>
 </html>
