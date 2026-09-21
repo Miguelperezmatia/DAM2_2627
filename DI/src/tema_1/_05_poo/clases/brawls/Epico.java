@@ -1,31 +1,15 @@
 package tema_1._05_poo.clases.brawls;
 
-public class Epico implements Brawler
-{
-    private String nombre;
-    private int vida;
+public class Epico extends Brawler {
 
-    public Epico(int vida, String nombre)
+    public Epico(String nombre, int vida)
     {
-        this.vida = vida;
-        this.nombre = nombre;
+        super(nombre, vida);
     }
 
     @Override
     public void atacar()
     {
         System.out.printf("%s con %d de vida de tipo épico atacando%n", nombre, vida);
-    }
-
-    @Override
-    public void defender()
-    {
-        System.out.printf("%s con %d de vida de tipo épico defendiendo%n", nombre, vida);
-    }
-
-    @Override
-    public void morir()
-    {
-        System.out.printf("%s con %d de vida de tipo épico muerto%n", nombre, vida);
     }
 }
