@@ -17,8 +17,8 @@
         echo "Lenguaje " . LENGUAJE . " de nivel " . NIVEL;
 
 
-        //  VARIABLES
-
+        //  VARIABLES:  No existe el tipo char
+        
         $nombre = "Miguel";     //  String
         $edad = 24;             //  Integer
         $altura = 1.75;         //  Double
@@ -54,6 +54,8 @@
         var_dump(nombre_variable)           Obtiene el tipo y el valor de una variable
 
         En un echo no se puede concatenar un var_dump(nombre_variable)
+
+        No existe el dato de tipo char
     -->
     
 </body>
