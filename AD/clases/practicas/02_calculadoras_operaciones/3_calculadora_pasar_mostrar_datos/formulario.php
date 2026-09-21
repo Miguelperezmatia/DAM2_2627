@@ -1,3 +1,8 @@
+<!--
+    Igual que la calculadora básica, pero la página de resultado debe mostrar también los dos operandos y 
+    el operador recibidos, además del resultado — por ejemplo: “7 + 3 = 10”.
+-->
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
