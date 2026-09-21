@@ -52,8 +52,6 @@ if(num % 3 === 0)
 else 
     console.log("No es múltiplo de 3")
 
-
-
 let mensaje = "Es múltiplo de 3"
 
 if(num % 3 !== 0)
@@ -66,5 +64,32 @@ console.log(mensaje)
 num % 3 === 0 ? console.log("Es múltiplo de 3") : console.log("No es múltiplo de 3")
 
 
+const prompt = require('prompt-sync')();
 
 
+let name = prompt("NOMBRE: ")
+let edad = prompt("EDAD: ")
+
+if(name === "Begoña")
+    console.log("guapa")
+
+else if(edad < 0)
+    console.log("bainas")
+
+else if(edad <= 3)
+    console.log("bebé")
+
+else if(edad < 10)
+    console.log("niñata")
+
+else if(edad <= 14)
+    console.log("niñato")
+
+else if(edad < 18)
+    console.log("adolescente")
+
+else if(edad < 65)
+    console.log("Eres adulto")
+
+else 
+    console.log("Eres mayor")
