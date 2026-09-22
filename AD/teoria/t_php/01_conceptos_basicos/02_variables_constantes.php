@@ -13,6 +13,7 @@
 
         const LENGUAJE = "PHP";
         define ("NIVEL", "PRINCIPIANTE");
+        define ("PI", 3.1415);
 
         echo "Lenguaje " . LENGUAJE . " de nivel " . NIVEL;
 
