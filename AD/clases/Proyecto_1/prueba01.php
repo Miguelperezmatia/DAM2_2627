@@ -14,6 +14,17 @@
     <p>La hora actual de hoy es 
         <?php
             echo date('H:i:s');  
+
+            for($i=1 ; $i<=100; $i++)
+                echo $i;
+
+
+            function saludar($nombre, $saludo)
+            {
+                return $saludo . $nombre;
+            }
+
+            echo saludar("Miguel", "Hola qué tal");
         ?>
     </p>
 </body>
