@@ -2,8 +2,8 @@ package practicas.BrawlStars;
 
 public abstract class Brawler
 {
-    protected String name;
-    protected int health;
+    private String name;
+    private int health;
 
     public Brawler(String name, int health)
     {
