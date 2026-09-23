@@ -16,8 +16,8 @@ public class Epic extends Brawler
     }
 
     @Override
-    public Brawler actionByCategory(Brawler brawler)
+    public Brawler actionByCategory(Brawler enemy)
     {
-        return null;
+        return this.increaseHealth(supplies);
     }
 }
