@@ -31,5 +31,17 @@ public abstract class Brawler
         this.health = health;
     }
 
+    public Brawler increaseHealth(int supply)
+    {
+        this.health += supply;
+        return this;
+    }
+
+    public Brawler reduceHealth(int damage)
+    {
+        this.health -= damage;
+        return this;
+    }
+
     public abstract Brawler actionByCategory(Brawler brawler);
 }

@@ -1,14 +1,18 @@
 package practicas.BrawlStars;
 
-public class Legendario extends Brawler
+public class Legendary extends Brawler
 {
-
     private int damage ;
 
-    public Legendario(String name, int health, int damage)
+    public Legendary(String name, int health, int damage)
     {
         super(name, health);
-        this.damage =damage;
+        this.damage = damage;
+    }
+
+    public int getDamage()
+    {
+        return damage;
     }
 
     @Override
