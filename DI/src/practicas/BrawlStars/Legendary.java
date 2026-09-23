@@ -20,4 +20,6 @@ public class Legendary extends Brawler
     {
         return null;
     }
+
+    
 }
