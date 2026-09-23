@@ -18,8 +18,8 @@ public class Legendary extends Brawler
     @Override
     public Brawler actionByCategory(Brawler enemy)
     {
-        return null;
+        return reduceHealth(damage);
     }
 
-    
+
 }
