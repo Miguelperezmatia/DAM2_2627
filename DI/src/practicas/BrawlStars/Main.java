@@ -13,8 +13,15 @@ public class Main
     {
        ArrayList<Brawler> brawlers =  crearListaBrawlers();
        String name = readDataString("Nombre: ");
-       int
+       int health = readDataInt("Vida: ");
+       
 
+    }
+
+    private static int readDataInt(String message)
+    {
+        System.out.print(message);
+        return scanner.nextInt();
     }
 
     private static String readDataString(String message)
