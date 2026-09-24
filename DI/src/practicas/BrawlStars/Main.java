@@ -12,10 +12,17 @@ public class Main
     public static void main(String[] args)
     {
        ArrayList<Brawler> brawlers =  crearListaBrawlers();
-       String name = readDataString("Nombre: ");
-       int health = readDataInt("Vida: ");
-       
+       Legendary legendary = createLegendaryBrawler();
 
+    }
+
+    private static Legendary createLegendaryBrawler()
+    {
+        String name = readDataString("Nombre: ");
+        int health = readDataInt("Vida: ");
+        int damage = readDataInt("Daño: ");
+
+        return new Legendary(name, health, damage);
     }
 
     private static int readDataInt(String message)
