@@ -12,12 +12,12 @@ public class Main
     public static void main(String[] args)
     {
        ArrayList<Brawler> brawlers =  crearListaBrawlers();
-       String name = leerDato("Nombre: ");
+       String name = leerDatoString("Nombre: ");
 
 
     }
 
-    private static String leerDato(String message)
+    private static String leerDatoString(String message)
     {
         System.out.print(message);
         return scanner.nextLine();
