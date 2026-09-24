@@ -1,14 +1,27 @@
 package practicas.BrawlStars;
 
-import java.util.ArrayList;
+import tema_1._05_poo.clases.brawls.Legendario;
 
-public class Main {
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Main
+{
+    static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args)
     {
        ArrayList<Brawler> brawlers =  crearListaBrawlers();
-       
+       String name = leerDato("Nombre: ");
+
+
     }
+
+    private static String leerDato(String message)
+    {
+        
+    }
+
 
     private static ArrayList<Brawler> crearListaBrawlers()
     {
