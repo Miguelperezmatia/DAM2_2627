@@ -11,10 +11,22 @@ public class Main
 
     public static void main(String[] args)
     {
+        createMenu();
        ArrayList<Brawler> brawlers =  crearListaBrawlers();
        Legendary legendary = createLegendaryBrawler();
        Epic epic = createEpicBrawler();
 
+    }
+
+    private static void createMenu()
+    {
+        System.out.println("""
+                            1. Ver brawlers
+                            2. Crear brawler legendario
+                            3. Crear brawler épico
+                            4. Combatir
+                            5. Salir
+                            """);
     }
 
     private static Epic createEpicBrawler()
