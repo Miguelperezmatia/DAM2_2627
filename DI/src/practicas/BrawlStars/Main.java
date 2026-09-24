@@ -13,7 +13,17 @@ public class Main
     {
        ArrayList<Brawler> brawlers =  crearListaBrawlers();
        Legendary legendary = createLegendaryBrawler();
+       Epic epic = createEpicBrawler();
 
+    }
+
+    private static Epic createEpicBrawler()
+    {
+        String name = readDataString("Nombre: ");
+        int health = readDataInt("Vida: ");
+        int supplies = readDataInt("Suministros: ");
+
+        return new Epic(name, health, supplies);
     }
 
     private static Legendary createLegendaryBrawler()
