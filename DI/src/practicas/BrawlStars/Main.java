@@ -9,13 +9,18 @@ public class Main
 
     public static void main(String[] args)
     {
-        createMenu();
         ArrayList<Brawler> brawlers =  crearListaBrawlers();
-        int option = readDataInt("OPCION: ");
-        executeOption(option,brawlers);
-        Legendary legendary = createLegendaryBrawler();
-        Epic epic = createEpicBrawler(brawlers);
+        int option;
 
+        while(true)
+        {
+            createMenu();
+            option = readDataInt("OPCION: ");
+            if(option == 5)
+                break;
+
+            executeOption(option,brawlers);
+        }
     }
 
     private static void executeOption(int option, ArrayList<Brawler> brawlers)
@@ -28,14 +33,24 @@ public class Main
             createEpicBrawler(brawlers);
         else if(option == 4)
             fight(brawlers);
-
-
-
     }
 
     private static void fight(ArrayList<Brawler> brawlers)
     {
+        String brawler1 = readDataString("Nombre del Brawler 1: ");
+        String brawler2 = readDataString("Nombre del Brawler 2: ");
 
+        for(Brawler brawler : brawlers)
+        {
+            if(brawler1.equals(brawler.getName()) || brawler2.equals(brawler.getName()))
+            {
+                System.out.println("Uno de los brawlers no se ha encontrado...");
+                return;
+            }
+        }
+
+        System.out.println(brawler1.toString());
+        System.out.println(brawler2.toString());
     }
 
     private static void showBrawlers(ArrayList<Brawler> brawlers)
