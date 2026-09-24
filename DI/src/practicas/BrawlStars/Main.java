@@ -19,7 +19,8 @@ public class Main
 
     private static String leerDato(String message)
     {
-        
+        System.out.print(message);
+        return scanner.nextLine();
     }
 
 
