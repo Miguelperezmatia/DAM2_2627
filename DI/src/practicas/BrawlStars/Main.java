@@ -12,10 +12,36 @@ public class Main
     public static void main(String[] args)
     {
         createMenu();
-       ArrayList<Brawler> brawlers =  crearListaBrawlers();
-       Legendary legendary = createLegendaryBrawler();
-       Epic epic = createEpicBrawler();
+        int option = readDataInt("OPCION: ");
+        executeOption(option);
+        ArrayList<Brawler> brawlers =  crearListaBrawlers();
+        Legendary legendary = createLegendaryBrawler();
+        Epic epic = createEpicBrawler();
 
+    }
+
+    private static void executeOption(int option, ArrayList<Brawler> brawlers)
+    {
+        if(option == 1)
+            showBrawlers(brawlers);
+        else if(option == 2)
+            createLegendaryBrawler();
+        else if(option == 3)
+            createEpicBrawler();
+        else if(option == 4)
+
+
+    }
+
+    private static void showBrawlers(ArrayList<Brawler> brawlers)
+    {
+        if(brawlers.isEmpty())
+        {
+            System.out.println("Todavía no hay brawlers creados...");
+            return;
+        }
+
+        System.out.println(brawlers);
     }
 
     private static void createMenu()
