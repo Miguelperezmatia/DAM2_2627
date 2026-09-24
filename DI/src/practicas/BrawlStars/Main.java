@@ -1,7 +1,5 @@
 package practicas.BrawlStars;
 
-import tema_1._05_poo.clases.brawls.Legendario;
-
 import java.util.ArrayList;
 import java.util.Scanner;
 
@@ -12,11 +10,11 @@ public class Main
     public static void main(String[] args)
     {
         createMenu();
-        int option = readDataInt("OPCION: ");
-        executeOption(option);
         ArrayList<Brawler> brawlers =  crearListaBrawlers();
+        int option = readDataInt("OPCION: ");
+        executeOption(option,brawlers);
         Legendary legendary = createLegendaryBrawler();
-        Epic epic = createEpicBrawler();
+        Epic epic = createEpicBrawler(brawlers);
 
     }
 
@@ -25,11 +23,18 @@ public class Main
         if(option == 1)
             showBrawlers(brawlers);
         else if(option == 2)
-            createLegendaryBrawler();
+            createLegendaryBrawler(brawlers);
         else if(option == 3)
-            createEpicBrawler();
+            createEpicBrawler(brawlers);
         else if(option == 4)
+            fight(brawlers);
 
+
+
+    }
+
+    private static void fight(ArrayList<Brawler> brawlers)
+    {
 
     }
 
@@ -55,22 +60,28 @@ public class Main
                             """);
     }
 
-    private static Epic createEpicBrawler()
+    private static Epic createEpicBrawler(ArrayList<Brawler> brawlers)
     {
         String name = readDataString("Nombre: ");
         int health = readDataInt("Vida: ");
         int supplies = readDataInt("Suministros: ");
 
-        return new Epic(name, health, supplies);
+        Epic epic = new Epic(name, health, supplies);
+        brawlers.add(epic);
+
+        return epic;
     }
 
-    private static Legendary createLegendaryBrawler()
+    private static Legendary createLegendaryBrawler(ArrayList<Brawler> brawlers)
     {
         String name = readDataString("Nombre: ");
         int health = readDataInt("Vida: ");
         int damage = readDataInt("Daño: ");
 
-        return new Legendary(name, health, damage);
+        Legendary legendary = new Legendary(name, health, damage);
+        brawlers.add(legendary);
+
+        return legendary;
     }
 
     private static int readDataInt(String message)
