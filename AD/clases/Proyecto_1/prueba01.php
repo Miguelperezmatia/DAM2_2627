@@ -6,12 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h2>
-        <?php
-            echo 7 + 7;
-        ?>
-    </h2>
+ 
     <p>La hora actual de hoy es 
+
         <?php
             echo date('H:i:s');  
 
@@ -25,7 +22,10 @@
             }
 
             echo saludar("Miguel", "Hola qué tal");
+
+            echo "<br><br>";   
         ?>
+
     </p>
 </body>
 </html>
