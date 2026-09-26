@@ -45,6 +45,40 @@ public class Main
         Brawler brawler1 = lookForBrawler(brawlers, name1);
         Brawler brawler2 = lookForBrawler(brawlers, name2);
 
+        if(brawler1 != null && brawler2 != null)
+        {
+            validFight(brawler1, brawler2);
+            return;
+        }
+
+        System.out.println("Uno de los brawlers no se ha encontrado...\n");
+    }
+
+    private static void validFight(Brawler brawler1, Brawler brawler2)
+    {
+        System.out.println(brawler1.toString());
+        System.out.println(brawler2.toString() + "\n");
+
+        showFightByCategory(brawler1, brawler2);
+        showFightByCategory(brawler2, brawler1);
+    }
+
+    private static void showFightByCategory(Brawler brawler, Brawler enemy)
+    {
+        if(brawler instanceof Epic)
+        {
+            brawler.actionByCategory(brawler);
+            System.out.printf("%s Increase health to %d%n", brawler.toString(), brawler.getHealth());
+            System.out.println(enemy.toString() + "\n");
+            return;
+        }
+
+        int oldHealth = enemy.getHealth();
+        brawler.actionByCategory(enemy);
+        int damage = oldHealth - enemy.getHealth();
+
+        System.out.printf("%s Apply -%d damage to %s%n", brawler.toString(), damage, enemy.getName());
+        System.out.println(enemy.toString() + "\n");
     }
 
     private static Brawler lookForBrawler(ArrayList<Brawler> brawlers, String name1)
