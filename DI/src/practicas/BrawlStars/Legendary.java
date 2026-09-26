@@ -3,7 +3,10 @@ package practicas.BrawlStars;
     //  Clase que hereda de la clase Brawler
 public class Legendary extends Brawler
 {
-    //  Atributo único de esta clase (por ello no lo escribimos en la clase Brawler)
+    /*
+        Atributo único de esta clase (por ello no lo escribimos en la clase Brawler)
+        Representa el daño que puede causar el objeto
+    */
     private int damage ;
 
     /*
@@ -23,7 +26,7 @@ public class Legendary extends Brawler
     }
 
     /*
-        Metodo sobreescrito que reduce la salud del objeto de tipo Brawler pasado por parámetro
+        Metodo sobreescrito que reduce la salud del objeto de tipo Brawler pasado por parámetro utilizando el daño (atributo damage)
         Estamos especificando el cuerpo del metodo abstracto de la clase padre y se llama al metodo reduceHealth(int damage) de dicha clase
     */
     @Override
