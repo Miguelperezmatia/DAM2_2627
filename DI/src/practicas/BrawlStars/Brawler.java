@@ -31,6 +31,12 @@ public abstract class Brawler
         this.health = health;
     }
 
+    @Override
+    public String toString()
+    {
+        return "[" + name + ":" + health + "]";
+    }
+
     public Brawler increaseHealth(int supply)
     {
         this.health += supply;
