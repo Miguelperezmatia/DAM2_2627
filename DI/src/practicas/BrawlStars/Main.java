@@ -25,6 +25,8 @@ public class Main
 
     private static void executeOption(int option, ArrayList<Brawler> brawlers)
     {
+        System.out.println();
+
         if(option == 1)
             showBrawlers(brawlers);
         else if(option == 2)
@@ -37,31 +39,38 @@ public class Main
 
     private static void fight(ArrayList<Brawler> brawlers)
     {
-        String brawler1 = readDataString("Nombre del Brawler 1: ");
-        String brawler2 = readDataString("Nombre del Brawler 2: ");
+        String name1 = readDataString("Nombre del Brawler 1: "); // Luis
+        String name2 = readDataString("Nombre del Brawler 2: "); //  Paco
 
+        Brawler brawler1 = lookForBrawler(brawlers, name1);
+        Brawler brawler2 = lookForBrawler(brawlers, name2);
+
+    }
+
+    private static Brawler lookForBrawler(ArrayList<Brawler> brawlers, String name1)
+    {
         for(Brawler brawler : brawlers)
         {
-            if(brawler1.equals(brawler.getName()) || brawler2.equals(brawler.getName()))
-            {
-                System.out.println("Uno de los brawlers no se ha encontrado...");
-                return;
-            }
+            if(brawler.getName().equals(name1))
+                return brawler;
         }
 
-        System.out.println(brawler1.toString());
-        System.out.println(brawler2.toString());
+        return null;
     }
+
 
     private static void showBrawlers(ArrayList<Brawler> brawlers)
     {
         if(brawlers.isEmpty())
         {
-            System.out.println("Todavía no hay brawlers creados...");
+            System.out.println("Todavía no hay brawlers creados...\n");
             return;
         }
 
-        System.out.println(brawlers);
+        for(Brawler brawler:brawlers)
+            System.out.println(brawler.toString());
+
+        System.out.println();
     }
 
     private static void createMenu()
@@ -84,6 +93,8 @@ public class Main
         Epic epic = new Epic(name, health, supplies);
         brawlers.add(epic);
 
+        System.out.println();
+
         return epic;
     }
 
@@ -96,13 +107,17 @@ public class Main
         Legendary legendary = new Legendary(name, health, damage);
         brawlers.add(legendary);
 
+        System.out.println();
+
         return legendary;
     }
 
     private static int readDataInt(String message)
     {
         System.out.print(message);
-        return scanner.nextInt();
+        int dato = scanner.nextInt();
+        scanner.nextLine();
+        return dato;
     }
 
     private static String readDataString(String message)
@@ -111,11 +126,8 @@ public class Main
         return scanner.nextLine();
     }
 
-
     private static ArrayList<Brawler> crearListaBrawlers()
     {
         return new ArrayList<Brawler>();
     }
-
-
 }
