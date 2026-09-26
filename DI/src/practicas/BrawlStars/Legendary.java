@@ -18,7 +18,7 @@ public class Legendary extends Brawler
     @Override
     public Brawler actionByCategory(Brawler enemy)
     {
-        return reduceHealth(damage);
+        return enemy.reduceHealth(damage);
     }
 
 
