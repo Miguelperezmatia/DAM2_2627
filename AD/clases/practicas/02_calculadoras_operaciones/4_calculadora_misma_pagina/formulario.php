@@ -48,16 +48,16 @@
             return $resultado;
         }
 
-        function mostrarResultado($resultado)
+         function mostrarResultado(float $numeroUno, float $numeroDos, string $operador, $resultado)
         {
             if(is_string($resultado))
                 return "Error: $resultado";
             
-            return "El resultado es $resultado";
+            return "$numeroUno $operador $numeroDos = $resultado";
         }
 
         $resultado = calcularOperacion($numero1, $numero2, $operador);
-        $mensaje = mostrarResultado($resultado);
+        $mensaje = mostrarResultado($numero1, $numero2, $operador, $resultado);
     ?>
 
     <h3>RESULTADO DE LA OPERACIÓN</h3>
