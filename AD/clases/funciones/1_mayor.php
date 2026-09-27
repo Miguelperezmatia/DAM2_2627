@@ -7,7 +7,9 @@
 </head>
 <body>
 
-    <?php 
+    <?php
+
+use BcMath\Number;
 
         $numero1 = "10";
         $numero2 = 5.0;
@@ -66,7 +68,7 @@
                     return -1;
 
                 $numeros = [$num1, $num2, $num3];
-                $mayor = -1000;
+                $mayor = $numeros[0];
 
                 foreach($numeros as $n)
                 {
