@@ -88,24 +88,12 @@ public class Main
     /*
         Metodo que muestra la lucha de dos Brawlers
 
-            Para ello comprobamos si es de tipo Epic o Legendary, ya que cada uno tiene su ataque o característica principal
-            Después llamamos al metodo brawler.actionByCategory(Brawler brawler) que dependiendo del tipo se comporta de manera diferente
+            Llamamos al metodo brawler.actionByCategory(Brawler brawler) que dependiendo del tipo se comporta de manera diferente
+            Después mostramos las características del brawler enemigo
     */
     private static void showFightByCategory(Brawler brawler, Brawler enemy)
     {
-        if(brawler instanceof Epic)
-        {
-            brawler.actionByCategory(enemy);
-            System.out.printf("%s Increase health to %d%n", brawler.toString(), brawler.getHealth());
-            System.out.println(enemy.toString() + "\n");
-            return;
-        }
-
-        int oldHealth = enemy.getHealth();
-        brawler.actionByCategory(enemy);
-        int damage = oldHealth - enemy.getHealth();
-
-        System.out.printf("%s Apply -%d damage to %s%n", brawler.toString(), damage, enemy.getName());
+        System.out.println(brawler.actionByCategory(enemy));
         System.out.println(enemy.toString() + "\n");
     }
 
