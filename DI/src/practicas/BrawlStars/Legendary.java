@@ -28,10 +28,12 @@ public class Legendary extends Brawler
     /*
         Metodo sobreescrito que reduce la salud del objeto de tipo Brawler pasado por parámetro utilizando el daño (atributo damage)
         Estamos especificando el cuerpo del metodo abstracto de la clase padre y se llama al metodo reduceHealth(int damage) de dicha clase
+        Devuelve en un String el daño que aplica el brawler de tipo Legendary al de tipo Epic
     */
     @Override
-    public Brawler actionByCategory(Brawler enemy)
+    public String actionByCategory(Brawler enemy)
     {
-        return enemy.reduceHealth(damage);
+        enemy.reduceHealth(damage);
+        return String.format("%s Apply -%d damage to %s", this.toString(), damage, enemy.getName());
     }
 }
