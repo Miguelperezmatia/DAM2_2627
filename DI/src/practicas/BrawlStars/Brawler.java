@@ -53,8 +53,8 @@ public abstract class Brawler
 
     /*
         Metodo abstracto que realizará una acción dependiendo del tipo de Brawler que sea el objeto pasado por parámetro
-        Devuelve el propio objeto (también podría no devolver nada (escribiendo void) si se quisiera cambiar)
+        Devuelve Un String que será un mensaje explicando el combate
         Es abstracto porque no tiene cuerpo; el cuerpo será implementado en las clases hijas
     */
-    public abstract Brawler actionByCategory(Brawler brawler);
+    public abstract String actionByCategory(Brawler brawler);
 }
