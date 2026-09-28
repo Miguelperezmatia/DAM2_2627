@@ -28,10 +28,12 @@ public class Epic extends Brawler
     /*
         Metodo sobreescrito que aumenta la salud del propio objeto que invoque al metodo utilizando sus suministros (atributo supplies)
         Estamos especificando el cuerpo del metodo abstracto de la clase padre y se llama al metodo increaseHealth(int supply) de dicha clase
+        Devuelve en un String la salud que se incrementa el brawler de tipo Epic
     */
     @Override
-    public Brawler actionByCategory(Brawler enemy)
+    public String actionByCategory(Brawler enemy)
     {
-        return this.increaseHealth(supplies);
+        this.increaseHealth(supplies);
+        return String.format("%s Increase health to %d", this.toString(), this.getHealth());
     }
 }
