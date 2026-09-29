@@ -88,7 +88,6 @@ use BcMath\Number;
             echo numeroMayorTresAv(2,1,1) . "<br>";
             echo numeroMayorTresAv(1,1,1) . "<br>";
 
-
             echo "<br><br>";    
     ?>
 
