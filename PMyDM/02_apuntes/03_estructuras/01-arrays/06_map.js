@@ -34,3 +34,11 @@ numProc = numeros.map(n => n % 2 == 0 ? n * 2 : n)
 console.log(numDup)     //  [ 4, 16, 68, -10, 36 ]
 console.log(numInd)     //  [ 0, 8, 68, -15, 72 ]
 console.log(numProc)    //  [ 4, 16, 68, -5, 36 ]
+
+
+
+//  Ejemplo con String
+
+const marcas_coches = ["bmw", "mercedes", "audi", "toyota", "AAA"];
+const sociedadesLimitada = marcas_coches.map(v => v + " sociedad limitada")
+console.log(sociedadesLimitada);
