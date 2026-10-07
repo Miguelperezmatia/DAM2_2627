@@ -15,3 +15,5 @@ const marcas_coches = ["bmw", "mercedes", "audi", "toyota", "AAA"];
 
 console.log(marcas_coches.find(v => v.length > 4));         //  mercedes
 console.log(marcas_coches.find(v => v.length > 400));       //  undefined
+
+console.log(marcas_coches.find(v => v.substring() > 4));    //
