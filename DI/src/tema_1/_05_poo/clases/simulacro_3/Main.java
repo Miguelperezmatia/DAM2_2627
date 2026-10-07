@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import static tema_1._05_poo.clases.simulacro_3.Utilidades.readInt;
 import static tema_1._05_poo.clases.simulacro_3.Utilidades.readString;
 
-public class Menu
+public class Main
 {
     private static final ArrayList<Vehiculo> VEHICULOS = new ArrayList<>();
 
@@ -27,10 +27,36 @@ public class Menu
                 crearPatinete(VEHICULOS);
             else if(option == 3)
                 crearMoto(VEHICULOS);
-
+            else if(option == 4)
+                simularViaje(VEHICULOS);
         }
-        
-        
+    }
+
+    private static void simularViaje(ArrayList<Vehiculo> vehiculos)
+    {
+        System.out.println("--- SIMULAR VIAJE ---");
+        String id = readString("ID del vehiculo: ");
+        Vehiculo vehiculo = encontrarVehiculo(id, vehiculos);
+
+        if(vehiculo == null)
+        {
+            System.out.println("Vehículo no encontrado en el repositorio.\n");
+            return;
+        }
+
+        int minutos = readInt("MINUTOS: ");
+        vehiculo.actionByVehicle(minutos);
+    }
+
+    private static Vehiculo encontrarVehiculo(String id, ArrayList<Vehiculo> vehiculos)
+    {
+        for(Vehiculo vehiculo: vehiculos)
+        {
+            if(id.equals(vehiculo.getId()))
+                return vehiculo;
+        }
+
+        return null;
     }
 
     private static void crearMoto(ArrayList<Vehiculo> vehiculos)
@@ -62,10 +88,9 @@ public class Menu
         }
 
         for(Vehiculo vehiculo:vehiculos)
-        {
+            System.out.println(vehiculo.toString());
 
-        }
-
+        System.out.println();
     }
 
 
