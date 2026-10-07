@@ -115,14 +115,12 @@ Crea el ArrayList<SpaceShip> vacío.
 Crea un ArrayList<SystemUser> y añade dos usuarios por defecto:
 
 Un Commander con credenciales: "leia" / "rebelde"
-
 Un Pilot con credenciales: "luke" / "fuerza"
+
 
 Inicia el menú principal (bucle infinito):
 
 Iniciar sesión en la base estelar.
-
 Apagar sistema (salir del programa).
-
 Login: Pide usuario y contraseña. Si coinciden, muestra un mensaje de bienvenida y llama a userSession pasándole la flota (polimorfismo en acción). Si no, "Acceso denegado".
 ```
