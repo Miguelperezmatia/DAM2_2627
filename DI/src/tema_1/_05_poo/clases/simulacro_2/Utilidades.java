@@ -2,7 +2,7 @@ package tema_1._05_poo.clases.simulacro_2;
 
 import java.util.Scanner;
 
-public class Utils
+public class Utilidades
 {
     //  Atributo privado
     private static final Scanner SCANNER = new Scanner(System.in);
