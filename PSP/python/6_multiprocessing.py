@@ -17,7 +17,15 @@ if __name__ == "__main__":
     print("Fin del programa.")
 
 '''
-    El archivo ejecutado directamente por el usuario recibe el nombre interno "__main__".
+Librería multiprocessing
+
+    La librería multiprocessing sí separa   la creación     hijo = multiprocessing.Process(target=mi_tarea
+                                            la ejecución    hijo.start()
+
+    .join() es el equivalente exacto de .wait() en la librería subprocess.
+
+
+EXPLICANDO EL if __name__ == "__main__":
 
     Cuando se crea un proceso hijo (en Windows), este vuelve a leer el archivo desde el principio,
     pero no recibe el nombre "__main__".
