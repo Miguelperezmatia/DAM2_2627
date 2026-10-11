@@ -44,7 +44,5 @@ except subprocess.CalledProcessError as e:
         e.stderr            contiene el texto exacto del error que escupió el proceso (en este caso, el ZeroDivisionError).
 
 
-            check = False:  no se lanza la excepcion sino que nosotros lo analizamos mediante un if else con returncode
-
         El proceso padre por defecto se llama __maaain__
 '''

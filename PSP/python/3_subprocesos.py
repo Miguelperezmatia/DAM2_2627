@@ -12,6 +12,12 @@ print("Código: ", codigo)
 
 
 '''
+Librería subprocess:
+
+    La función subprocess.Popen(...) crea el proceso hijo y lo ejecuta inmediatamente a la vez que el proceso padre se sigue ejecutando
+    En esta librería no existe el comando .start().
+
+
     p = subprocess.Popen([...])
 
         Solicita al SO que ejecute un nuevo proceso de forma no bloqueante (es decir, tu programa principal sigue leyendo las 
