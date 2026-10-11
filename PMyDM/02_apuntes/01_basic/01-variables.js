@@ -1,9 +1,8 @@
+//  CONSTANTES
+const PI = 3.141592
+console.log("PI: " + PI)
 
-//  Variables
-
-let name = "Miguel"
-console.log(name);
-
-//  Constantes
-
-const nameDos = "Alberto"
+//  VARIABLES
+let nombre = "Miguel"
+nombre = "Carlos"
+console.log(`Nombre ${nombre}`)
