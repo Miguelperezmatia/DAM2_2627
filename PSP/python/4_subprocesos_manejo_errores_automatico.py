@@ -42,7 +42,4 @@ except subprocess.CalledProcessError as e:
 
         e.returncode        contiene el número del error que devolvió el sistema operativo (ej. 1 para error general)
         e.stderr            contiene el texto exacto del error que escupió el proceso (en este caso, el ZeroDivisionError).
-
-
-        El proceso padre por defecto se llama __maaain__
 '''
