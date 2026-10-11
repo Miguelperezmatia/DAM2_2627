@@ -1,4 +1,6 @@
-//  Sin parámetros ni retorno
+//  FUNCIONES NORMALES
+
+//  1)  Sin parámetros ni retorno
 
 function saludar()
 {
@@ -7,7 +9,7 @@ function saludar()
 
 
 
-//  Con parámetro
+//  2)  Con parámetro
 
 function saludarUsuario(name)
 {
@@ -18,7 +20,7 @@ saludar()                   //  HOLA
 saludarUsuario("Miri")      //  HOLA Miri
 
 
-//  Con parámetros y retorno
+//  3)  Con parámetros y retorno
 
 function sumar (num1, num2)
 {
@@ -29,7 +31,23 @@ const resultado = sumar(10,20)
 console.log(resultado)              //  30
 
 
-//  Funciones anónimas: Son las que no tienen nombre, pero se pueden asignar a una variable o constante
+
+
+
+//  FUNCIONES FLECHA:   Son funciones anónimas con una sintáxis más simplificada
+
+const mensajeDos = (nombre, edad) => console.log(`Mi nombre es ${nombre} y  tengo ${edad} años`)
+mensajeDos("Miguel", 24)    //  Mi nombre es Miguel y  tengo 24 años
+
+const multiplicar = (num1, num2) => num1 * num2
+console.log(multiplicar(5, 4))                      //  20
+
+
+
+
+
+
+//  FUNCIONES ANÓNIMAS: Son las que no tienen nombre, pero se pueden asignar a una variable o constante
 
 const mensaje = function(name)
 {
@@ -40,10 +58,3 @@ mensaje("Miguel")       //  Mi nombre es Miguel
 
 
 
-//  Funciones flecha:   Son funciones anónimas con una sintáxis más simplificada
-
-const mensajeDos = (nombre, edad) => console.log(`Mi nombre es ${nombre} y  tengo ${edad} años`)
-mensajeDos("Miguel", 24)    //  Mi nombre es Miguel y  tengo 24 años
-
-const multiplicar = (num1, num2) => num1 * num2
-console.log(multiplicar(5, 4))                      //  20
