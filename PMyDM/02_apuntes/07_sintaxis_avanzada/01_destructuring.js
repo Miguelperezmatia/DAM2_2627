@@ -5,8 +5,6 @@
     sola línea de código
 */
 
-
-
 const ordenador1 = {
     n_procesador: 3,
     procesador: "i7",
@@ -22,10 +20,18 @@ console.log(np, c, r); // Imprime: 3 true 'razer'
 /*
     --- DESTRUCTURING CON OBJETO ---
 
-    La extracción se hace por el NOMBRE EXACTO de la propiedad.
+    La extracción se hace por el NOMBRE EXACTO de la propiedad. NO HAY QUE PONER ordenador1.propiedad
 
     NO es obligatorio renombrar:
         Estamos usando la sintaxis "propiedadOriginal: nuevoNombreVariable" para crear alias.
+
+
+
+    Cuando metes variables sueltas dentro de unas llaves {} para fabricar un objeto, JavaScript hace dos cosas automáticamente por ti:
+
+        Usa el nombre de la variable como el nombre de la propiedad (la clave).
+
+        Usa el valor de la variable como el valor de esa propiedad.
 */  
 
 
