@@ -3,11 +3,12 @@
 
 //  1 OPCIÓN (recomendada)
 
+const vacio = []
 const miArray = [5, 290, 32]
 const animales = ["Vaca", "Zorro"]
 
 
-//  2 OPCIÓN
+//  2 OPCIÓN, TAMAÑO FIJO
 
 const numbers = new Array(3)  //  Reserva 3 huecos
 
