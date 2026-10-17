@@ -38,10 +38,10 @@ except subprocess.CalledProcessError as e:
     Si el proceso hubiera funcionado bien:
     
         stdout          guarda el resultado obtenido
-        
+
         returncode      guarda el código de error (0 si va todo bien)
 
-        strip() simplemente limpia los saltos de línea o espacios en blanco sobrantes al principio y al final.
+        strip()         limpia los saltos de línea o espacios en blanco sobrantes al principio y al final.
 
 
     Si el proceso falla:
