@@ -64,11 +64,15 @@ function extraerInfoOrdenador({ n_procesador: np, conectado: c, raton: r })
 
         En lugar de recibir todo el objeto como parámetro desestructuramos el objeto directamente en el momento
         en que la función lo recibe.
+    
+        Para extraer propiedades de un objeto directamente en los parámetros de entrada, debes envolver las llaves 
+        dentro de unos paréntesis. 
+    
+        Si omites los paréntesis, JavaScript interpreta las llaves como el inicio del bloque de código y lanza un error
 */
 
 
 console.log(extraerInfoOrdenador(ordenador1));
-
 
 
 
@@ -96,3 +100,4 @@ console.log(nombre, avatar); // Imprime: "Ana" "anonimo.png"
 // Busca 'rol', lo renombra a 'r', y como no existe le asigna "invitado"
 const { nombre: n, rol: ro = "invitado" } = usuarioDB;
 console.log(n, ro); // Imprime: "Ana" "invitado"
+
