@@ -15,11 +15,15 @@
     
         Valor inicial:          El punto de partida.
 
-                                Si no se pone, en la primera vuelta se toma automáticamente el índice 0 del array como valor inicial, 
-                                se lo asigna al acumulado y el actual toma el índice 1.
+                                Si no se pone valor inicial, en la primera vuelta tendríamos:
 
-                                Si pones el valor opcional, en la primera vuelta ese valor se lo queda el acumulado y el actual toma directamente
-                                el del elemento del índice 0)
+                                    acumulado toma el valor del índice 0 del array
+                                    actual toma el valor del índice 1 del array
+
+                                Si pones el valor inicial. en la primera vuelta tendríamos:
+                                
+                                    acumulado toma el valor inicial que se ha escrito
+                                    actual toma el valor del índice 0 del array
  
 
     La estructura real es esta:
