@@ -12,18 +12,15 @@ print("Código: ", codigo)
 
 
 '''
-Librería subprocess:
-
-    La función subprocess.Popen(...) crea el proceso hijo y lo ejecuta inmediatamente a la vez que el proceso padre se sigue ejecutando
-    En esta librería no existe el comando .start().
-
-
     p = subprocess.Popen([...])
 
-        Solicita al SO que ejecute un nuevo proceso de forma no bloqueante (es decir, tu programa principal sigue leyendo las 
-        siguientes líneas inmediatamente)
+        Lanza y ejecuta un nuevo proceso de forma no bloqueante (es decir, tu programa principal sigue leyendo las 
+        siguientes líneas inmediatamente).
+
+        Por tanto, se da el PARALELISMO, ya que hay dos procesos trabajando al mismo tiempo
 
         Devuelve un objeto de la clase Popen:   es un mando a distancia para interactuar con ese proceso
+
 
     sys.executable, "-c", "import time; time.sleep(2)"
 
@@ -39,6 +36,7 @@ Librería subprocess:
             Si el proceso sigue trabajando, devuelve None. 
             Si ya ha terminado, devuelve su código de salida (un número entero, donde 0 significa éxito y cualquier otro número significa error)
 
+            
     p.wait()
     
         Pausa y bloquea el hilo de tu programa principal (estado bloqueado) hasta que el proceso hijo (llamado p) termine su tarea   
