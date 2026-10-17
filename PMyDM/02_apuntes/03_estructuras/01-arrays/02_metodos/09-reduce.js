@@ -87,4 +87,29 @@ console.log(maximo);
 */
 
 
+/*
+    EJERCICIO REDUCE CON FUNCIÓN FLECHA
+
+    Escribe una función contarPorCategoria(lista), que imprima { RPG: 3, Plataformas: 1, Metroidvania: 1 }
+*/
+
+const inventario = [
+  { id: 1, titulo: "Cyberpunk 2077", categoria: "RPG", precio: 45, stock: 0 },
+  { id: 2, titulo: "Super Mario Odyssey", categoria: "Plataformas", precio: 50, stock: 12 },
+  { id: 3, titulo: "Zelda: Tears of the Kingdom", categoria: "RPG", precio: 65, stock: 5 },
+  { id: 4, titulo: "Elden Ring", categoria: "RPG", precio: 60, stock: 3 },
+  { id: 5, titulo: "Hollow Knight", categoria: "Metroidvania", precio: 15, stock: 20 },
+];
+
+
+const contarPorCategoria = (lista) => lista.reduce((acumulado, actual)=> 
+    {
+        acumulado[actual.categoria] ? acumulado[actual.categoria]++ : acumulado[actual.categoria] = 1;
+
+        return acumulado;
+    }, {});
+
+    
+console.log(contarPorCategoria(inventario));
+
 
