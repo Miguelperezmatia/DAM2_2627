@@ -4,13 +4,15 @@ import sys
 
 try:
     resultado = subprocess.run(
-        [sys.executable, "-c", "print(6 / 0)"],
+        [sys.executable, "-c", "print(6 / 1)"],
         capture_output=True,
         text=True,
         check=True
     )
 
     print(resultado.stdout.strip())
+    print(resultado.returncode)
+
 
 except subprocess.CalledProcessError as e:
     print("Excepción capturada automáticamente:")
@@ -19,10 +21,13 @@ except subprocess.CalledProcessError as e:
 
 
 '''
-    subprocess.run()    ejecuta un comando, espera a que termine y devuelve un objeto con los resultados.
+    subprocess.run()    
+    
+        Es una función bloqueante. 
+        
+            Lanza el proceso hijo y pausa automáticamente al proceso padre hasta que el hijo termine su ejecución por completo.
 
-
-        capture_output=True:    atrapa internamente lo que el proceso iba a imprimir en pantalla (tanto el stdout como el stderr).
+        capture_output=True:    atrapa tanto el stdout como el stderr.
 
         text=True:              convierte los datos capturados (que por defecto son bytes) en texto normal (strings).
 
@@ -32,8 +37,9 @@ except subprocess.CalledProcessError as e:
                                 
     Si el proceso hubiera funcionado bien:
     
-        Imprimimos el resultado por stdout (Al trabajar con un objeto debemos usar esta propiedad para distinguirlas de otras como
-        por ejemplo .returncode)
+        stdout          guarda el resultado obtenido
+        
+        returncode      guarda el código de error (0 si va todo bien)
 
         strip() simplemente limpia los saltos de línea o espacios en blanco sobrantes al principio y al final.
 
