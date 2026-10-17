@@ -8,7 +8,6 @@ function saludar()
 }
 
 
-
 //  2)  Con parámetro
 
 function saludarUsuario(name)
@@ -32,8 +31,6 @@ console.log(resultado)              //  30
 
 
 
-
-
 //  FUNCIONES FLECHA:   Son funciones anónimas con una sintáxis más simplificada
 
 const mensajeDos = (nombre, edad) => console.log(`Mi nombre es ${nombre} y  tengo ${edad} años`)
@@ -41,19 +38,6 @@ mensajeDos("Miguel", 24)    //  Mi nombre es Miguel y  tengo 24 años
 
 const multiplicar = (num1, num2) => num1 * num2
 console.log(multiplicar(5, 4))                      //  20
-
-/*
-    Si usas llaves {}:  
-    
-        Estás abriendo un bloque de código y es obligatorio escribir la palabra return para devolver algo.
-        A veces con .reduce() hay que usar dos return
-
-    Si NO usas llaves {}: 
-        Hay un return implícito (automático).
-        Lo que pongas justo después de la flecha se devuelve directamente
-*/
-
-
 
 
 
