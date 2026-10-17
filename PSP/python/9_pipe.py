@@ -50,6 +50,11 @@ if __name__ == "__main__":
 
         Espera el mensaje del hijo y desempaqueta sus dos valores.
 
+        El receptor obtiene un objeto reconstruido a partir de los datos enviados, es decir, no recibe una referencia 
+        de la variable original porque los procesos tienen un espacio de direcciones de memoria virtual propio y aislado.    
+
+        Entonces no se aplica el paso por referencia sino que se aplica la serialización   
+
 
     Hay que pasar envio porque los procesos en Python no comparten memoria entre sí.
 
