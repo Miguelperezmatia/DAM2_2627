@@ -109,7 +109,41 @@ const contarPorCategoria = (lista) => lista.reduce((acumulado, actual)=>
         return acumulado;
     }, {});
 
-    
+
 console.log(contarPorCategoria(inventario));
 
 
+
+
+/*    
+    EJERCICIO 1: Cálculo por cliente (USAR DOS RETURN)
+
+    Escribe una función calcularGasto(lista, nombreCliente) que devuelva la cantidad total de dinero que ha gastado
+    el cliente indicado (sumando el precio de todos los productos de sus compras).
+
+    Si el cliente no existe en la lista, la función debe devolver 0.
+*/
+
+const pedidos = [
+  { id: 1, cliente: "Ana", estado: "entregado", compras: [{ prod: "Ratón", precio: 20 }, { prod: "Teclado", precio: 50 }] },
+  { id: 2, cliente: "Luis", estado: "pendiente", compras: [{ prod: "Monitor", precio: 200 }] },
+  { id: 3, cliente: "Marta", estado: "entregado", compras: [{ prod: "Cable USB", precio: 10 }, { prod: "Ratón", precio: 20 }] },
+  { id: 4, cliente: "Sara", estado: "cancelado", compras: [{ prod: "Portátil", precio: 800 }] }
+];
+
+
+const calcularGasto = (lista, nombreCliente) => 
+    {
+        return lista.reduce((acumulado, actual) => 
+            {
+                if(actual.cliente === nombreCliente)
+                    { 
+                        for(let compra of actual.compras)
+                            acumulado += compra.precio;
+                    }
+
+                return acumulado;
+            }, 0)
+    }
+
+console.log(calcularGasto(pedidos, "Anaa"));
