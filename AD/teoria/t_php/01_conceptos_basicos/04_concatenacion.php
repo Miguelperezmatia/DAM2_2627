@@ -14,6 +14,7 @@
         echo "Hola, mi nombre es " . $nombre . "<br>";      //  Usando el . para concatenar
         echo "Hola, mi nombre es $nombre <br>";             //  Usando la interpolación con comillas dobles
 
+        
     ?>
 
     
