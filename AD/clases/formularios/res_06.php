@@ -25,9 +25,9 @@
             for ($i=0; $i < $numeroLetras; $i++) 
             { 
                 $letra = crearLetra();
-                $palabra = $palabra . $letra;
+                $palabra.=$letra;
             }
-
+                
             return $palabra;
         }
 
@@ -37,7 +37,7 @@
 
             for ($i=0; $i < $numeroPalabras; $i++) 
                 $arrayPalabras[$i] = crearPalabra($numeroLetras);
-
+                
             return $arrayPalabras;
         }
 
