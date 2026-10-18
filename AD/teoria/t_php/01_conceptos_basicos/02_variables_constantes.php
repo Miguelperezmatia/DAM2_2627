@@ -32,16 +32,6 @@
 
         echo "NOMBRE: " . gettype($nombre) . "<br>" . "EDAD: " . gettype($edad) . "<br>" . "ALTURA: " . gettype($altura) . 
         "<br>" . "CONDUCTOR : " . gettype($es_conductor) . "<br>" . "SIN VALOR : " . gettype($sin_valor) . "<br>" . "<br>";
-
-        //  VAR_DUMP()
-
-        echo "NOMBRE: "; var_dump($nombre); echo "<br>";
-        echo "EDAD: "; var_dump($edad); echo "<br>";
-        echo "ALTURA: "; var_dump($altura); echo "<br>";
-        echo "CONDUCTOR: "; var_dump($es_conductor); echo "<br>";
-        echo "SIN VALOR: "; var_dump($sin_valor); echo "<br>";
-
-        //  VAR EXPORT: Sirve para estructuras de datos complejas como Listas
     ?>
 
     <!--
