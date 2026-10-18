@@ -8,9 +8,9 @@
 <body>
 
     <form action="../t_php/01_recepcion_formulario.php" method="post">
-        <input type="text" name="nombre" placeholder="Tu nombre">
-        <input type="number" name="edad" placeholder="Tu edad">
-        <button type="submit">ENVIAR</button>
+        <input type="text" name="nombre" placeholder="Tu nombre" required>
+        <input type="number" name="edad" placeholder="Tu edad" readonly>
+        <button type="submit" value="ENVIAR">ENVIAR</button>
     </form>
 
     <!-- 
@@ -30,8 +30,11 @@
                     value           Establece el contenido exacto que se muestra escrito dentro de un campo
 
                     readonly        Campo de solo lectura
+                    required        Campo obligatorio
 
         <button>    Crea un boton para pulsar
+
+                    value           usar esta propiedad para dar valor al botón
     -->
 
 </body>
