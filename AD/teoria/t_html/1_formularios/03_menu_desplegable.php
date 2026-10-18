@@ -20,6 +20,8 @@
 
     </select>
 
+    </form> 
+
     <!--
         <label>
             
@@ -45,10 +47,6 @@
                 value   Contiene el dato real que viaja oculto al servidor, y el texto "PHP" es la cara visible que el 
                         usuario lee en la pantalla.
     -->
-
-
-
-</form> 
     
 </body>
 </html>
