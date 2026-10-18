@@ -19,7 +19,7 @@
         <div style="background-color: aqua; padding: 10px; border:2px solid black; margin:10px;">
 
             <b>NÚMERO DE PALABRAS</b>
-
+            
             <select name="numeroPalabras">
                 <?php 
                     for($i=1; $i<=100; $i++)
