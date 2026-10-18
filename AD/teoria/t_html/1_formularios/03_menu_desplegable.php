@@ -9,7 +9,6 @@
 
     <form action="procesar.php" method="POST">
 
-
     <label for="idiomas">Elige un lenguaje:</label>
 
     <select name="lenguaje" id="idiomas">
