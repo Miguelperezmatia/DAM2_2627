@@ -2,7 +2,7 @@
     1 METODO:
 
         Usa comillas invertidas para crear la cadena de texto.
-        Permite inyectar variables  directamente dentro de los bloques ${}.
+        Permite inyectar variables, funciones... directamente dentro de los bloques ${}.
         Todo lo que esté dentro se convierte automáticamente a texto (string).
 */
 
