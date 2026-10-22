@@ -14,33 +14,18 @@
 </head>
 <body>
 
-    <?php $tam = 5; ?>
+    <form action="02_resultado.php" method="post">
+        <div>
+            <label>ALTURA DE LA TABLA</label>
+            <input type="number" name="altura" required>
+        </div>
 
-    <h1>TABLA DE NÚMEROS ALEATORIOS</h1>
+        <br><br>
 
-    <table border="1">
-
-        <?php 
-            for ($i=0; $i <  $tam ; $i++) 
-            { 
-                echo "<tr>";
-
-                for ($j=0; $j < $tam; $j++)
-                    {
-                        
-                        if($i === $j)
-                            echo "<td style='background-color: blue;'>" . rand(1, 99) . "</td>";
-                        else 
-                            echo "<td>" . rand(1, 99) . "</td>";
-                    }
-                
-                echo "</tr>"."<br>";
-            }
-        ?>
-
-
-    </table>
-    
+        <div>
+            <input type="submit" value="DAME">
+        </div>
+    </form>
     
 </body>
 </html>
