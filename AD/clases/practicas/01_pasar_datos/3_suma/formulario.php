@@ -1,6 +1,6 @@
-<!-- 
-    Un formulario con varios campos numéricos que, al enviarse por POST, muestra en otra página la suma de todos ellos 
-    dentro de un nuevo campo de solo lectura.
+<!--
+        Un formulario con varios campos numéricos que, al enviarse por POST, muestra en otra página la suma de todos ellos
+        dentro de un nuevo campo de solo lectura.
 -->
 
 <!DOCTYPE html>
@@ -11,15 +11,29 @@
     <title>Document</title>
 </head>
 <body>
+    <form action="resultado.php" method="post"> 
 
-    <form action="resultado.php" method="post">
+        <label>NÚMERO 1</label>
+        <input type="number" name="number1" required>
 
-    NUMERO 1: <input type="number" name="num1" required> <br><br>
-    NUMERO 2: <input type="number" name="num2" required> <br><br>
-    NUMERO 3: <input type="number" name="num3" required> <br><br>
+        <br>
+        <br>
 
-    <button type="submit">SUMAR</button>
-    </form>
-    
+        <label>NÚMERO 2</label>
+        <input type="number" name="number2" required>
+
+        <br>
+        <br>
+
+        <label>NÚMERO 3</label>
+        <input type="number" name="number3" required>
+
+        <br>
+        <br>
+
+        <input type="submit" value="DAME">
+
+    </form> 
+
 </body>
 </html>
