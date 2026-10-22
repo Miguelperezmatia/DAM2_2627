@@ -12,13 +12,31 @@
 </head>
 <body>
     
-    <form action="resultado.php" method="post">
+    <form action ="resultado.php" method="post">
 
-        NÚMERO 1 : <input type="number" name="num1" required>
-        NÚMERO 2 : <input type="number" name="num2" required>
-        OPERADOR : <input type="text" name="operador" required>
+        <label>NÚMERO 1</label>
+        <input type="number" name="numero1" required>
 
-        <button type="submit">ENVIAR</button>
+        <br>
+        <br>
+
+
+        <label>NÚMERO 2</label>
+        <input type="number" name="numero2" required>
+
+        <br>
+        <br>
+
+        <label>OPERADOR</label>
+
+        <select name="operador">
+            <option value="+">+</option>
+            <option value="-">-</option>
+            <option value="*">*</option>
+            <option value="/">/</option>
+        </select>  
+
+        <input type="submit" name="button" value="DAME">
     </form>
 
 </body>
