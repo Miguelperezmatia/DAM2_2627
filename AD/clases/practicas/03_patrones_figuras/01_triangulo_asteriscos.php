@@ -5,7 +5,7 @@
         usando dos bucles anidados por fila.
     */
         $altura = leerAltura();
-        mostrarTriangulo($altura);
+        triangulo($altura);
 
         function leerAltura()
         {
@@ -19,25 +19,28 @@
             }
         }
 
-        //  En la programación de texto en consola no es necesario imprimir los espacios del lado derecho
+        /*
+            $altura = 5
 
-        function mostrarTriangulo($altura)
+            i 0    4 e     1 a          
+            i 1    3 e     3 a
+            i 2    2 e     5 a
+            i 3    1 e     7 a
+            i 4    0 e     9 a
+        */
+
+        function triangulo(int $altura)
         {
-            for($i = 0; $i < $altura; $i++)
-            {
-                //  Espacios
-                for($e = 0; $e < $altura - $i - 1; $e++)
-                    {
-                        echo " ";
-                    }
+            for($i=0; $i < $altura; $i++)
+                {
+                    for($e = 0; $e < $altura - $i - 1; $e++)
+                        echo "_";
 
-                //  Asteriscos
-                for($a = 0; $a < $i * 2 +1; $a++)
-                    {
+                    for($a=0; $a < 2 * $i + 1; $a++)   
                         echo "*";
-                    }
-                echo "\n";
-            }
+
+                    echo "\n";
+                }
         }
 
     ?>
