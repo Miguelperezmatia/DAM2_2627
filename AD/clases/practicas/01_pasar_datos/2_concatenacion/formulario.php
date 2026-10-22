@@ -7,20 +7,42 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
 </head>
 <body>
+        <form action="resultado.php" method="post">
+                <div>
+                        <label>VALOR 1</label>
+                        <input type="text" name="input1" required>
+                </div>
 
-    <form action="resultado.php" method="post">
+                <br>
 
-    NOMBRE: <input type="text" name="nombre"> <br><br>
-    CIUDAD: <input type="text" name="ciudad"> <br><br>
-    COLOR: <input type="text" name="color">   <br><br>
+                <div>
+                        <label>VALOR 2</label>
+                        <input type="text" name="input2" required>
+                </div>
 
-    <button type="submit">ENVIAR</button>
-    </form>
-    
+                <br>
+
+                <div>
+                        <label>VALOR 3</label>
+                        <input type="text" name="input3" required>
+                </div>
+
+                <br>
+
+
+                <br>
+
+                <div>
+                        <input type="submit" name ="boton2" value="CONCATENO"></input>
+                </div>
+
+        </form>        
+
+
 </body>
 </html>
