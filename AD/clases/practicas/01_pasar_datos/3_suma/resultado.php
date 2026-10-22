@@ -9,15 +9,14 @@
 
     <?php  
 
-        $num1 = $_POST['num1'];
-        $num2 = $_POST['num2'];
-        $num3 = $_POST['num3'];
+        $suma = 0;
 
-        $resultado = $num1 + $num2 + $num3;
+        foreach($_POST as $valor)
+            $suma+=$valor;
+    
+        echo "<input type='number' value='$suma' readonly>";
     ?>
 
-    <p>
-        La suma de los números es <input type="number" value="<?php echo $resultado?>" readonly>
-    </p> 
+
 </body>
 </html>
