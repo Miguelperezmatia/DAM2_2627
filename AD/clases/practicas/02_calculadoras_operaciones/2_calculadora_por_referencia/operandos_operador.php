@@ -14,28 +14,16 @@
 <body>
     <?php
 
-        function calcularOperacion(float $numeroUno, float $numeroDos, string $operador, &$resultado)
+        function calcularOperacion($operando1, $operando2, $operador, &$resultado)
         {
-
-            if($operador === "+")
-                $resultado = $numeroUno + $numeroDos;
-
-            else if($operador === "-")
-                $resultado = $numeroUno - $numeroDos;
-
-            else if($operador === "*")
-                $resultado = $numeroUno * $numeroDos;
-
-            else if($operador === "/")
-                {
-                    if($numeroDos === 0.0)
-                        $resultado = "No se puede dividir por cero";        
-                    else
-                        $resultado = $numeroUno / $numeroDos;
-                }
-
-            else 
-                $resultado = "Introduce un operador válido";
+            $resultado = match($operador)
+            {
+                "+" => $operando1 + $operando2,
+                "-" => $operando1 - $operando2,
+                "*" => $operando1 * $operando2,
+                "/" => $operando2 !== 0 ? $operando1 / $operando2 : "No se puede dividir por 0",
+                default => "Operador inválido",
+            };
         }
 
         $total = 0;
