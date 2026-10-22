@@ -8,53 +8,21 @@
 <body>
     
     <?php 
+        $num1       =   $_POST["numero1"] ?? 0;
+        $num2       =   $_POST["numero2"] ?? 0;
+        $operador   =   $_POST["operador"] ?? "";
 
-        $num1 = $_POST["num1"];
-        $num2 = $_POST["num2"];
-        $operador = $_POST["operador"];
-
-        function calcularOperacion(float $numeroUno, float $numeroDos, string $operador)
+        $resultado = match($operador)
         {
-            $resultado = 0;
+            "+" => $num1 + $num2,
+            "-" => $num1 - $num2,
+            "*" => $num1 * $num2,
+            "/" => $num2 != 0 ? $num1 / $num2 : "No se puede dividir por 0",
+            default => "Operador inválido",
+        };
 
-            if($operador === "+")
-                $resultado = $numeroUno + $numeroDos;
-
-            else if($operador === "-")
-                $resultado = $numeroUno - $numeroDos;
-
-            else if($operador === "*")
-                $resultado = $numeroUno * $numeroDos;
-
-            else if($operador === "/")
-                {
-                    if($numeroDos === 0.0)
-                        $resultado = "No se puede dividir por cero";        
-                    else
-                        $resultado = $numeroUno / $numeroDos;
-                }
-
-            else 
-                $resultado = "Introduce un operador válido";
-
-            return $resultado;
-        }
-
-        function mostrarResultado($resultado)
-        {
-            if(is_string($resultado))
-                return "Error: $resultado";
-            
-            return "El resultado es $resultado";
-        }
-
-        $resultado = calcularOperacion($num1, $num2, $operador);
-        $mensaje = mostrarResultado($resultado);
+        echo "$num1 $operador $num2 = $resultado";
     ?>
-
-    <h3>RESULTADO DE LA OPERACIÓN</h3>
-
-    <p> <input value="<?php echo $mensaje ?>" style="width: 300px" readonly> </p>
 
 </body>
 </html>
