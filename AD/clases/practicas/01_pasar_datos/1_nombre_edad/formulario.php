@@ -6,19 +6,33 @@
 -->
 
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
 </head>
 <body>
+        
+        <form action="resultado_02.php" method="post">
+                <div>
+                        <label>NOMBRE</label>
+                        <input type="text" name="nombre" required>
+                </div>
 
-    <form action="resultado.php" method="post">
-        <input name="nombre" type="text" placeholder="Tu nombre">
-        <input name="edad" type="number" placeholder="Tu edad">
-        <button type="submit">ENVIAR</button>
-    </form>
+                <br>
+
+                <div>
+                        <label>EDAD</label>
+                        <input type="number" name="edad" required>
+                </div>
+                
+                <br>
+
+                <div>
+                        <button type="submit">ENVIAR</button>
+                </div>
+        </form>
 
 </body>
 </html>
