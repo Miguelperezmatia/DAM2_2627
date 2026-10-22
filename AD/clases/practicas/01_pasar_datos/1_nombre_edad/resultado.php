@@ -7,13 +7,15 @@
 </head>
 <body>
 
-    <h1>PRUBA DE FORMULARIO</h1>
-
-    <?php
-        $nombre = $_POST['nombre'];
-        $edad = $_POST['edad'];
-    ?>
+    <?php 
+        $nombre = $_POST["nombre"] ?? "Anónimo";
+        $edad = $_POST["edad"] ?? -1;
         
-    <p>Hola <?php echo $nombre;?>, el ano que viene tendras <?php echo $edad + 1;?> anos</p>
+        $edad_posterior = $edad + 1;
+
+        echo "Hola $nombre, el año que vienes tendrás $edad_posterior años.";
+    ?>
+    
 </body>
 </html>
+ 
