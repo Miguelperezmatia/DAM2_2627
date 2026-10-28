@@ -14,7 +14,8 @@
             Asigna un valor inicial a pot cuando nos metemos por primera vez en la página
             Si no a pot se le asigna el valor según la lógica
         */
-        if(count($_POST) === 0)
+
+        if(empty($_POST))
             $pot = 1000;
         else
             $pot = $_POST["pot"];
@@ -77,8 +78,6 @@
 
         if(isset($_POST["boton"]))
             {
-                comprobar($num1, $num2, $num3, $num4, $pot);
-
                 if(comprobarSaldoValido($pot))
                 {
                     $pot -= 15;
@@ -96,7 +95,7 @@
     <!--    DINERO INCIAL    -->
         <div>
             <label>POT:</label>
-            <input type="text" name="pot" value="<?php echo $pot?>">
+            <input type="text" name="pot" value="<?php echo $pot?>" readonly>
         </div>
 
 
@@ -107,13 +106,13 @@
         <?php echo $num4 ?>
 
 
-    <!--    BOTÓN    -->
+    <!--    BOTÓN   Se desactiva el botón de JUGAR para un saldo menor a 15    -->
         <div>
             <?php 
                 if(comprobarSaldoValido($pot)) 
                     echo "<input type='submit' name='boton' value='JUGAR'>";
                 else 
-                    echo "<input type='submit' name='boton' value='JUGAR'> disabled";
+                    echo "<input type='submit' name='boton' value='JUGAR' disabled>";
             ?>
         </div>
 
