@@ -8,6 +8,31 @@
 <body>
     
     <?php
+
+        /*
+            VARIABLES GLOBALES
+
+            La palabra reservada global permite acceder a una variable que ha sido definida fuera de una función desde el interior de la misma.
+            Se usa cuando no pasas la variable dentro de los paréntesis como un argumento
+
+                En PHP, las variables creadas fuera de una función son invisibles en el interior de una función por defecto. 
+
+                Si intentas modificar $equipos dentro de una función sin declararla como global, PHP creará una variable local temporal que se 
+                destruirá al finalizar la función, perdiendo cualquier dato que hayas guardado en ella.
+        */
+
+
+        //  EJEMPLO DE USO DE GLOBAL
+        $puntos = 0;
+
+        function sumarPuntos() 
+        {
+            global $puntos;
+            $puntos = $puntos + 10;
+        }
+
+        sumarPuntos();
+
     
         //  CONSTANTES
 
