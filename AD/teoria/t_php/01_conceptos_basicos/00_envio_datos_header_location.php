@@ -15,6 +15,9 @@
 
                             ?   indica que se va a poner un dato a enviar
                                 la sintaxis es      clave = valor       donde clave puede ser cualquier nombre (es el name del form)
+
+                                
+            Al enviar los datos por GET cuando los recibamos tendremos que usar $_GET[]
         */
 
         header("Location: ejemplo_metodo_get.php?ultimo_pot=" . $pot);
