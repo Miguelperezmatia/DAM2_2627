@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="tragaperras.css">
 </head>
 
 <body>
@@ -93,21 +94,22 @@
     <form action="tragaperras.php" method="post">
 
     <!--    DINERO INCIAL    -->
-        <div>
+        <div id="div_input">
             <label>POT:</label>
             <input type="text" name="pot" value="<?php echo $pot?>" readonly>
         </div>
 
 
     <!--    FIGURAS    -->
-        <?php echo $num1 ?>
-        <?php echo $num2 ?>
-        <?php echo $num3 ?>
-        <?php echo $num4 ?>
-
+        <div id = "imagen">
+            <?php echo $num1 ?>
+            <?php echo $num2 ?>
+            <?php echo $num3 ?>
+            <?php echo $num4 ?>
+        </div>
 
     <!--    BOTÓN   Se desactiva el botón de JUGAR para un saldo menor a 15    -->
-        <div>
+        <div id="div_boton">
             <?php 
                 if(comprobarSaldoValido($pot)) 
                     echo "<input type='submit' name='boton' value='JUGAR'>";
