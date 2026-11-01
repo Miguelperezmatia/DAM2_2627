@@ -14,14 +14,15 @@
                             debemos poner la ruta a la página donde queremos enviar el dato
 
                             ?   indica que se va a poner un dato a enviar
-                                la sintaxis es      clave = valor       donde clave puede ser cualquier nombre (es el name del form)
+                                la sintaxis es         clave = valor       donde clave puede ser cualquier nombre (es el name del form)
+                            Ejemplo         =>         [tusitio.com/buscar.php?nombre=Juan&edad=25]
 
-                                
+            
+            El usuario NO interactúa para que esto ocurra (diferencia con un form).                    
             Al enviar los datos por GET cuando los recibamos tendremos que usar $_GET[]
         */
 
         header("Location: ejemplo_metodo_get.php?ultimo_pot=" . $pot);
-
 
         // Siempre detenemos el script tras un header de redirección
         exit(); 
