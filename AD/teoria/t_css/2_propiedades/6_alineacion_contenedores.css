@@ -1,0 +1,50 @@
+/*
+    Sirve para mover contenedores enteros (como un bloque <div>)
+
+
+    display: flex
+    
+        convierte al contenedor en una caja flexible y hace que todos los elementos que estén directamente dentro
+        de él (elementos hijos) se coloquen automáticamente en una fila horizontal, uno al lado del otro.
+
+
+    justify-content: 
+    
+        controla cómo se distribuyen los elementos hijos en el eje principal (horizontalmente).
+
+            flex-start      alinea todos los elementos al inicio del contenedor (izquierda).
+
+            flex-end        alinea todos los elementos al final del contenedor (derecha).
+
+            center          agrupa todos los elementos juntos en el centro exacto.
+
+            space-between   pega el primer elemento al inicio, el último al final, y reparte el espacio sobrante equitativamente entre los demás.
+
+            space-around    añade espacio igual a ambos lados de cada elemento (los extremos tendrán la mitad de espacio que la separación central).
+
+            space-evenly    reparte el espacio de forma exactamente igual entre todos los elementos y los bordes del contenedor.
+
+
+    align-items: 
+    
+        controla cómo se alinean los elementos hijos en el eje perpendicular (verticalmente).
+
+            stretch         estira los elementos verticalmente para que ocupen toda la altura del contenedor.
+
+            flex-start:     alinea los elementos en la parte superior.
+
+            flex-end:       alinea los elementos en la parte inferior.
+
+            center:         centra los elementos verticalmente en el medio del contenedor.
+
+            baseline:       alinea los elementos tomando como referencia la línea base del texto que llevan dentro.
+
+
+    gap: 
+
+        define la separación exacta entre los elementos dentro de un contenedor flex o grid
+
+            el primer valor es la separación vertical y el segundo es la separación horizontal 
+                px
+                %
+*/
