@@ -1,0 +1,80 @@
+/*
+    MARGIN Y PADDING
+
+    Tanto margin como padding comparten la misma lógica para asignar valores.
+
+    Propiedades individuales:
+
+        margin-top, margin-right, margin-bottom, margin-left.
+
+        padding-top, padding-right, padding-bottom, padding-left.
+
+        (margin: 0 auto;)
+        
+            Centra un bloque horizontalmente dentro de su contenedor (el elemento debe tener un width definido).
+
+
+        1 Valor (padding: 20px;)
+        
+            Aplica 20px a los 4 lados por igual.
+
+
+        2 Valores (margin: 10px 30px;)
+        
+            El 1º es para Arriba/Abajo (10px)
+            el 2º para Derecha/Izquierda (30px).
+
+
+        3 Valores (padding: 10px 20px 30px;): 
+        
+            El 1º es Arriba (10px)
+            el 2º es para los lados Derecha e Izquierda (20px)
+            el 3º es Abajo (30px).
+
+
+        4 Valores (margin: 10px 20px 30px 40px;): 
+        
+            Sigue las agujas del reloj: Arriba, Derecha, Abajo, Izquierda.
+*/
+
+
+/*
+        BORDER
+
+        El borde tiene subpropiedades específicas, aunque lo más común es usar el atajo que junta las tres principales.
+
+
+            border (Atajo):
+
+                Define estilo, grosor y color de una vez. 
+                Ej =>   border: 3px solid red;
+
+
+            border-style: 
+
+                Define el tipo de línea.
+                
+                    solid (continua)
+                    dashed (guiones)
+                    dotted (puntos)
+                    none (sin borde).
+
+
+            border-width:
+            
+                El grosor del borde
+                    px
+
+
+            border-color: 
+
+                El color de la línea.
+
+
+            border-radius: 
+
+                Redondea las esquinas
+                
+                    px  para curvar un poco.
+                    %   para convertir un cuadrado en un círculo perfecto.
+*/
