@@ -1,0 +1,34 @@
+/*  Obliga al navegador a incluir el padding y el border dentro del width que tú definiste  */
+
+
+* 
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/*
+    Content (Contenido): 
+    
+        El área útil donde se muestra el texto, imagen o elemento hijo. 
+        Su tamaño base se controla con width y height.
+
+
+    Padding (Relleno): 
+    
+        El espacio interior transparente que separa el contenido del borde.
+        Se usa para que el texto no se pegue a las paredes del contenedor.
+
+
+    Border (Borde): 
+    
+        La línea que envuelve el padding y el contenido.
+        Puede tener grosor, estilo y color 
+
+
+    Margin (Margen): 
+    
+        El espacio exterior transparente que separa tu elemento de las demás cajas a su alrededor.
+*/
