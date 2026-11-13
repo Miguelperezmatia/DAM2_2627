@@ -1,0 +1,420 @@
+body 
+{
+    font-family: 'Courier New', Courier, monospace;
+    color: #e0e0e0;
+    text-align: center;
+    padding: 30px;
+    transition: background 0.5s ease;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    margin: 0;
+    box-sizing: border-box;
+
+    position: relative;
+}
+
+form 
+{
+    margin-top: 50px; 
+}
+
+/* Planeta IGNOTUS */
+.ignotus 
+{
+    background: linear-gradient(rgba(15, 15, 20, 0.85), rgba(5, 5, 8, 0.85)), url('https://images-assets.nasa.gov/image/PIA07773/PIA07773~small.jpg');
+    background-size: cover;
+    background-position: center;
+    border: 5px solid #666666;
+}
+
+.ignotus h1, .ignotus h2, .ignotus h3, .ignotus h4 
+{
+    color: #cccccc;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+.ignotus form:nth-of-type(2) input[type="submit"] 
+{
+    background-color: transparent;
+    color: transparent;
+    border: none;
+    box-shadow: none;
+    cursor: default;
+    transition: all 0.5s ease;
+    position: absolute;
+    bottom: 40px;
+    right: 50px;
+}
+
+.ignotus form:nth-of-type(2) input[type="submit"]:hover 
+{
+    background-color: #001122;
+    color: #00bfff;
+    border: 2px solid #0088cc;
+    box-shadow: 0 0 12px #00bfff;
+    cursor: pointer;
+}
+
+.ignotus input[type="submit"] 
+{
+    background-color: #222;
+    color: #ccc;
+    border: 2px solid #666;
+}
+.ignotus input[type="submit"]:hover 
+{
+    background-color: #444;
+    color: #fff;
+    box-shadow: 0 0 10px #888;
+}
+
+.ignotus .acierto 
+{
+    color: #e0e0e0;
+    text-shadow: 0 0 8px #ffffff;
+}
+
+/* Planeta IGNIS */
+.ignis 
+{
+    background: linear-gradient(rgba(43, 0, 0, 0.85), rgba(5, 0, 0, 0.85)), url('https://dailygalaxy.com/wp-content/uploads/2026/04/Scientists-Spot-Unusual-Solar-Flare-Emissions-That-Defy-Current-Solar-Models-scaled.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 5px solid #ff3300;
+}
+.ignis h1, .ignis h2, .ignis h3, .ignis h4, .ignis p 
+{
+    color: #ff5500;
+    text-shadow: 0 0 8px #ff0000;
+}
+
+.ignis .pista-cruzada 
+{
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: #661100; 
+}
+
+.ignis input[type="submit"] 
+{
+    background-color: #3d0a00;
+    color: #ff5500;
+    border: 2px solid #ff3300;
+}
+.ignis input[type="submit"]:hover 
+{
+    background-color: #ff3300;
+    color: #000;
+    box-shadow: 0 0 12px #ff3300;
+}
+
+.ignis .acierto 
+{
+    color: #ffaa00;
+    text-shadow: 0 0 10px #ff3300;
+}
+
+
+
+/* Planeta AQUA */
+
+.aqua 
+{
+    background: linear-gradient(rgba(0, 10, 30, 0.85), rgba(0, 2, 10, 0.85)), url('https://static.boredpanda.com/blog/wp-content/uploads/2022/11/636a7660527d7_5d4gfcup9z991__700.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 5px solid #0088cc; /* Borde azul/cian adaptado al agua */
+}
+
+.aqua h1, .aqua h2, .aqua h3, .aqua h4, .aqua p 
+{
+    color: #00bfff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #0055ff;
+}
+
+.aqua input[type="submit"] 
+{
+    background-color: #001122;
+    color: #00bfff;
+    border: 2px solid #0088cc;
+}
+.aqua input[type="submit"]:hover 
+{
+    background-color: #0088cc;
+    color: #000;
+    box-shadow: 0 0 12px #00bfff;
+}
+
+.aqua .acierto 
+{
+    color: #00bfff;
+    text-shadow: 0 0 8px #0055ff;
+}
+
+
+/* Planeta GLACIES */
+.glacies 
+{
+    background: radial-gradient(circle, rgba(2, 6, 13, 0.85) 25%, rgba(11, 29, 58, 0.45) 100%), url('https://static8.depositphotos.com/1222912/818/i/450/depositphotos_8181029-stock-photo-ice-moon-alien-planet.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 5px solid #80deea; /* Borde azul/cian adaptado al agua */
+    box-shadow: inset 0 0 80px rgba(128, 222, 234, 0.25);
+}
+ 
+body.glacies p 
+{
+    color: #a5d8ff;
+    filter: blur(5px);
+    transition: filter 0.5s ease;
+    transition-delay: 5s; /* 5 segundos de espera */
+}
+
+body.glacies p:hover 
+{
+    filter: blur(0px);
+    color: #e0f7fa;
+    text-shadow: 0 0 10px #4a90e2;
+}
+
+.glacies h1, .glacies p 
+{
+    text-shadow: 0 0 8px #80deea;
+}
+
+/* --- PLANETA GLACIES (Hielo / Escarcha) --- */
+.glacies input[type="submit"] 
+{
+    background-color: #0f1d25;
+    color: #e0f7fa;
+    border: 2px solid #80deea;
+}
+.glacies input[type="submit"]:hover 
+{
+    background-color: #80deea;
+    color: #000;
+    box-shadow: 0 0 12px #e0f7fa;
+}
+
+.glacies .acierto 
+{
+    color: #80deea;
+    text-shadow: 0 0 10px #4a90e2;
+}
+
+
+
+/* Planeta TERRA */
+.terra 
+{
+    background: linear-gradient(rgba(20, 12, 5, 0.88), rgba(5, 3, 1, 0.88)), url('https://c02.purpledshub.com/uploads/sites/48/2024/07/richat-structure.jpg?webp=1&w=1200');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 5px solid #8b5a2b; 
+}
+
+.terra h1, .terra h2, .terra h3, .terra h4, .terra p
+ {
+    color: #d2b48c;
+    text-shadow: 0 0 8px #a0522d;
+}
+
+/* --- PLANETA TERRA (Tierra / Roca) --- */
+.terra input[type="submit"] 
+{
+    background-color: #201408;
+    color: #d2b48c;
+    border: 2px solid #8b5a2b;
+}
+
+.terra input[type="submit"]:hover 
+{
+    background-color: #8b5a2b;
+    color: #fff;
+    box-shadow: 0 0 12px #a0522d;
+}
+
+.terra p
+{
+    color: #e2b784;                  
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-shadow: 0 0 8px #8b5a2b;    
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.terra .acierto 
+{
+    color: #d2b48c;
+    text-shadow: 0 0 8px #a0522d;
+}
+
+
+
+/* Planeta VACUUM */
+
+.vacuum 
+{
+    background: radial-gradient(circle, rgba(15, 15, 15, 0.85) 0%, rgba(0, 0, 0, 0.96) 100%), url('https://s1.abcstatics.com/abc/www/multimedia/ciencia/2026/11/03/1200-nasa-hubble-space-telescope-74-khlmp1dk-unsplash-RjevEVgoDPLQeeK3Rl5wCUI-1200x840@diario_abc.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 5px solid #333333;
+}
+
+.vacuum h1, .vacuum h2, .vacuum h3, .vacuum h4, .vacuum p
+{
+    color: #888888;
+    text-shadow: 0 0 6px rgba(255, 255, 255, 0.15);
+}
+
+.vacuum .acierto 
+{
+    color: #cccccc;
+    text-shadow: 0 0 8px #ffffff;
+}
+
+.vacuum input[type="submit"] 
+{
+    background-color: #050505;
+    color: #777;
+    border: 2px solid #444;
+}
+.vacuum input[type="submit"]:hover 
+{
+    background-color: #222;
+    color: #fff;
+    box-shadow: 0 0 8px #ffffff;
+}
+
+.vacuum .texto-diagonal 
+{
+    position: absolute;       
+    top: 50px;                 
+    left: 50px;                
+    transform: rotate(-25deg); 
+    opacity: 0.03;             
+    color: #ffffff;            
+    transition: all 0.6s ease;
+    font-size: 0.85rem;
+    pointer-events: auto;      
+    max-width: 300px;          
+    text-align: left;
+}
+
+.vacuum .texto-diagonal:hover 
+{
+    opacity: 0.85;
+    text-shadow: 0 0 12px #00ffff;
+}
+
+
+
+/* Planeta GRATULATIONS */
+.gratulations 
+{
+    background: radial-gradient(circle, #1a3300 0%, #020a00 100%);
+    border: 5px solid #33cc33;
+    box-shadow: inset 0 0 50px rgba(51, 204, 51, 0.25); 
+}
+
+.gratulations h1, .gratulations h2, .gratulations h3, .gratulations h4, .gratulations p 
+{
+    color: #76ff03;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+.gratulations input[type="submit"] {
+    background-color: #0a2200;
+    color: #76ff03;
+    border: 2px solid #33cc33;
+}
+.gratulations input[type="submit"]:hover {
+    background-color: #33cc33;
+    color: #000;
+    box-shadow: 0 0 15px #00ff00;
+}
+
+.gratulations .acierto 
+{
+    color: #76ff03;
+    text-shadow: 0 0 10px #00ff00;
+}
+
+input[type="submit"], button 
+{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding: 10px 20px;
+    margin: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+}
+
+input[type="text"] 
+{
+    font-family: 'Courier New', Courier, monospace;
+    background: rgba(0, 0, 0, 0.6);
+    border: 1px solid #555;
+    color: #fff;
+    padding: 8px;
+    margin: 5px;
+    border-radius: 3px;
+}
+
+
+/* Botón deshabilitado */
+
+input[type="submit"]:disabled, button:disabled {
+    background-color: #1a1a1a !important;
+    color: #555555 !important;
+    border: 2px solid #333333 !important;
+    box-shadow: none !important;
+    cursor: not-allowed !important;
+    opacity: 0.6;
+}
+
+/*  Mensajes de aciertos, errores e intentos */
+
+.acierto 
+{
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.error, .intentos {
+    color: #ff4444;                  
+    font-size: 1.1rem;
+    font-weight: bold;
+    text-shadow: 0 0 8px #cc0000;     
+    margin: 20px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.numero_intentos
+{
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    color: #666666;
+    text-transform: uppercase;
+    padding: 4px 0;
+    margin: 10px auto;
+    width: fit-content;
+}
+
